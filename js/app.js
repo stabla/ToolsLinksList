@@ -1,5 +1,6 @@
 const inputSearch = document.getElementById('search-input');
 const _checkbox_strict = document.getElementById('strict-search-input');
+const _inputSearch_svg = document.getElementsByClassName('svg-container');
 const _checkbox_en = document.getElementById('lang-en-input');
 const _checkbox_fr = document.getElementById('lang-fr-input');
 const _span_lang = document.getElementsByClassName('lang');
@@ -140,9 +141,11 @@ inputSearch.addEventListener('keyup', function () {
     inputElements = inputElements.toLowerCase();
 
     if (inputElements === "") {
-        clear();
+        _inputSearch_svg[0].classList.remove('notEmpty');
         counter();
     } else if(inputElements.length >= 2) {
+        
+        _inputSearch_svg[0].classList.add('notEmpty');
         searchInDB(inputElements);
     }
 });

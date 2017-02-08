@@ -77,15 +77,9 @@ html, body {
     line-height: 1;
     color: #aaa;
 }
-
-.search-container input:focus {
-    content: 'Search in input';
-}
-.search-container input:focus + .svg-container {
+.search-container input:focus + .svg-container, .svg-container.notEmpty  {
     right: -100px;
 }
-
-
 
 .sub-input {
     margin-top: 8px;
