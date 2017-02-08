@@ -17,7 +17,7 @@
 🇬🇧 🇫🇷
 
 ### Keywords already existing
-HTML, CSS, SASS, Boostrap, JS, jQuery', React, Angular, Photoshop, Illustrator, PHP, MySQL , UI, UX, SVG, Animation, website, Ressources, Background,  Inspiration, Ruby, Color, Library, Loader, Nodejs, Bitcoin, Justify, Framework, Code, Learn, Programming, 3d, Interactive, Detection, Font, Flat, Paper, nav, Transition, Design, Effect, Startup, Launch, Marketing, List, Control, Font, Icon, Tool
+HTML, CSS, SASS, Boostrap, JS, jQuery', React, Angular, Photoshop, Illustrator, PHP, MySQL , UI, UX, SVG, Animation, website, Ressources, Background,  Inspiration, Ruby, Color, Library, Loader, Nodejs, Bitcoin, Justify, Framework, Code, Learn, Programming, 3d, Interactive, Detection, Font, Flat, Paper, nav, Transition, Design, Effect, Startup, Launch, Marketing, List, Control, Font, Icon, Tool, Security, Swift, Qr
 
 
 ## How to add?
