@@ -1,0 +1,125 @@
+<!--
+You come here to know how it works or the library I use ? 
+    For local database : taffy.js
+    And Basesign.css
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tools &amp; links list</title>
+    <link rel="icon" type="image/png" href="src/storage.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet/basesign-v2.css">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <script src="js/taffy-min.js"></script>
+    <script src="js/db.js"></script>
+    <script>
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+    <noscript>
+        <style>
+            .search-container, .elements-count, .twitter-share-button {
+                display: none !important;
+            }
+            .js-desactivated {
+                display: block !important;
+                margin-top: 20%;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="js-desactivated hidden">
+        <h4 class="title"> Error.</h4>
+        <h5 class="title"> JavaScript is desactivated on your browser. </h5>
+    </div>
+    <div class="search-container">
+        <a href="index.html"><h4 class="title">Tools &amp; links list.</h4></a>
+        <div class="wrapper">
+            <label>
+                <input id="search-input" type="text" >
+                <span class="svg-container">
+                <svg class="magnifier" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    <path d="M0 0h24v24H0z" fill="none" /> 
+                </svg> <span class="svg-text">Search something</span></span>
+            </label>
+            <div class="sub-input">
+                Try keywords: <span class="keyword-example sub-keyword"></span>, <span class="keyword-example sub-keyword2"></span>
+            </div>
+        </div>
+    </div>
+    <div class="elements-count">
+        <span class="search-choice">
+                   <label>Strict search<input type="checkbox" id="strict-search-input"></label>
+               </span>
+        <span class="lang-choice">
+                   <label>EN<input type="checkbox" id="lang-en-input" checked></label>
+                   <label>FR<input type="checkbox" id="lang-fr-input" checked></label>
+               </span> <span class="count" id="count">0</span> elements
+    </div>
+
+    <div class="elements-nothing"></div>
+    <div id="founded-lists">
+    </div>
+
+
+
+    <div class="bottom-right-panel">
+        
+        <div class="contribute-a"><a href="https://stabla.github.io/ToolsLinksList/">Pssst, contribute?</a>
+        </div>
+        <a href="https://www.github.com/stabla"> MADE BY @stabla</a>
+        <div class="left-part-contributor">
+            <p>Contributor</p>
+            <p>Nobody yet</p>
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstabla.github.io%2FToolsLinksList%2F&text=Tools%20%26%20links%20list%20for%20everything%20in%20IT">
+Share</a>
+        </div>
+    </div>
+    <script>
+        var rand01 = keywordsList[Math.floor(Math.random() * keywordsList.length)];
+        var rand02 = keywordsList[Math.floor(Math.random() * keywordsList.length)];
+
+
+        while (rand01 == rand02) {
+            rand02 = keywordsList[Math.floor(Math.random() * keywordsList.length)];
+        }
+
+        document.getElementsByClassName('sub-keyword')[0].innerHTML = rand01;
+        document.getElementsByClassName('sub-keyword2')[0].innerHTML = rand02;
+
+
+        document.getElementsByClassName('sub-keyword')[0].addEventListener('click', function () {
+            document.getElementById('search-input').value = document.getElementsByClassName('sub-keyword')[0].innerHTML;
+
+            searchInDB(document.getElementsByClassName('sub-keyword')[0].innerHTML);
+        })
+
+        document.getElementsByClassName('sub-keyword2')[0].addEventListener('click', function () {
+            document.getElementById('search-input').value = document.getElementsByClassName('sub-keyword2')[0].innerHTML;
+
+            searchInDB(document.getElementsByClassName('sub-keyword2')[0].innerHTML);
+        })
+    </script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

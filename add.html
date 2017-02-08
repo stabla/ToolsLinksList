@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add to Tools&amp;Links list</title>
+    <link rel="icon" type="image/png" href="src/storage.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet/basesign-v2.css">
+    <script src="js/taffy-min.js"></script>
+    <script src="js/db.js"></script>
+    <style>
+        body {
+            padding-top: 40px;
+        }
+        
+        .ilb {
+            display: inline-block;
+        }
+        
+        input,
+        select,
+        textarea,
+        label {
+            margin: 8px auto;
+            width: 100%;
+            display: block;
+        }
+        
+        input[type=submit] {
+            width: 30%;
+            position: relative;
+            right: 0;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            margin: 8px auto;
+            width: 60%;
+            min-width: 330px;
+        }
+        
+        .as-value {
+            width: 50px;
+            background-color: #ccc;
+        }
+        
+        .as-title {
+            width: 80%;
+            float: right;
+        }
+        
+        .as-type {
+            display: inline-block;
+            width: 150px;
+        }
+        
+        #input-type-custom {
+            display: inline-block;
+            width: 160px;
+            float: right;
+            margin-left: 50px;
+        }
+        
+        .as-keywords {
+            width: 100%;
+            overflow: auto;
+            margin: 0 auto;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        
+        .span-keywords {
+            display: inline-block;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        
+        #input-keyword-custom {
+            display: inline-block;
+            width: 40%;
+            margin-left: 50px;
+            float: right;
+        }
+        
+        label > input {
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h5 style="text-align: center;"> Format to push on <a href="https://stabla.github.io/ToolsLinksList/">GitHub</a> </h5>
+    <div class="container">
+        <input type="text" class="as-value ilb" disabled="disabled">
+        <input type="text" placeholder="Title" class="as-title ilb">
+        <input type="text" placeholder="URL" value="http://" class="as-url">
+        <select class="as-price">
+            <option value="free">Free</option>
+            <option value="fee">Have to paye for</option>
+        </select>
+
+        <select class="as-type">
+            <input type="text" id="input-type-custom" placeholder="Use Custom Type">
+        </select>
+        <select class="as-lang">
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+        </select>
+        <div class="as-keywords">
+        </div>
+
+        <input type="submit" id="format-it-submit" value="FORMAT IT">
+
+        <textarea id="textarea-output" cols="30" rows="4"></textarea>
+
+    </div>
+
+    <script>
+            const textarea_el = document.getElementById('textarea-output');
+            const id_el = elem().max("id") + 1;
+            const asTitle_el = document.getElementsByClassName('as-title')[0];
+            const asUrl_el = document.getElementsByClassName('as-url')[0];
+            const asPrice_el = document.getElementsByClassName('as-price')[0];
+            const asType_el = document.getElementsByClassName('as-type')[0];
+            const asLang_el = document.getElementsByClassName('as-lang')[0];
+            const asKeywords = document.getElementsByClassName('as-keywords')[0];
+        
+            document.getElementsByClassName('as-value')[0].value = id_el;
+        
+        
+        /* Fill Type list with pre-writted array in bd.js */ 
+        for (var i = 0; i < typeList.length; i++) {
+            asType_el.innerHTML += "<option value='" + typeList[i] + "'>  " + typeList[i] + "</option>";
+        }
+        
+
+        /* Fill Keywords list with pre-writted array in bd.js */ 
+        for (var i = 0; i < keywordsList.length; i++) {
+            asKeywords.innerHTML += "<span class='span-keywords'>" + keywordsList[i] + "<input type='checkbox' class='input-keywords' value='" + keywordsList[i] + "'/></span>";
+        }
+        asKeywords.innerHTML += '<input type="text" id="input-keyword-custom" placeholder="Add Custom Keyword">';
+        
+
+
+        /* Verify which checkboxes are checked */
+        function getCheckboxes() {
+            var toReturn = [];
+            for (var i = 0; i < keywordsList.length; i++) {
+                if (document.getElementsByClassName('input-keywords')[i].checked === true) {
+                    toReturn.push(document.getElementsByClassName('input-keywords')[i].value);
+                }
+            }
+            if (document.getElementById('input-keyword-custom').value !== "") {
+                toReturn.push(document.getElementById('input-keyword-custom').value);
+            }
+
+            return toReturn.join(' ');
+        }
+
+
+        document.getElementById('format-it-submit').addEventListener('click', function (event) {
+            
+            
+        var asType_elVal = asType_el.options[asType_el.selectedIndex].value;      
+        var asLang_elVal = asLang_el.options[asLang_el.selectedIndex].value;
+            /* If a the input of custom type is not empty, then replace the Type value. */
+            var inputTypeCustom = document.getElementById('input-type-custom');
+            inputTypeCustom.value !== "" ? asType_elVal = inputTypeCustom.value : '';
+
+            textarea_el.value = ' {"id":' + id_el + ', "title":"' + asTitle_el.value + '", "url":"' + asUrl_el.value + '", "price":"' + asPrice_el.value + '", "type":"' + asType_elVal + '", "lang":"' + asLang_elVal + '", "keywords":"' + getCheckboxes() + '"} '
+        })
+    </script>
+</body>
+
+</html>
