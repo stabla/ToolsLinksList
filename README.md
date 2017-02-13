@@ -1,5 +1,7 @@
 # Tools & Links Database <img src="storage.png" width="24">
 
+I was bored to losing time when I was searching for something in my bookmarks, so I created this. 
+
 > A stack of tutorials, articles, links, plugins, templates bookmarked month after month. It's time to sort them.
 
 - Contributions are more than welcome. Please see [contribution guide](add.md).
