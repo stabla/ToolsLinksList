@@ -315,6 +315,7 @@ background: -webkit-linear-gradient(45deg,orange, blue);
     font-size: 0.8rem;
     color: #bbb;
     overflow-x: hidden;
+    z-index: -1;
     animation: goRight 1000ms linear both;
     transition: opacity 1s cubic-bezier(.175,.885,.32,1);
 }
