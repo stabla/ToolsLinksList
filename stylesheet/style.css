@@ -309,13 +309,12 @@ background: -webkit-linear-gradient(45deg,orange, blue);
     position: absolute;
     right: 20px;
     bottom: 8px;
-    width: 100%;
+    width: 16%;
     min-height: 156px;
     text-align: right;
     font-size: 0.8rem;
     color: #bbb;
     overflow-x: hidden;
-    z-index: -1;
     animation: goRight 1000ms linear both;
     transition: opacity 1s cubic-bezier(.175,.885,.32,1);
 }
