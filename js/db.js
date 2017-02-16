@@ -241,6 +241,7 @@ var elem = TAFFY([
      {"id":243, "title":"Fontawesome", "url":"http://fontawesome.io/", "price":"free", "type":"Ressources", "lang":"en", "keywords":"font ressources icon icons"},
      {"id":244, "title":"uiGradients", "url":"https://uigradients.com/", "price":"free", "type":"Tools", "lang":"en", "keywords":"gradient color picker inspiration"},
      {"id":245, "title":"Shade : Mathematically derived gradient explorer", "url":"http://jxnblk.com/shade/", "price":"free", "type":"Ressources", "lang":"en", "keywords":"gradient color inspiration"},
+      {"id":246, "title":"Content Security Policy (CSP) Validator", "url":"https://cspvalidator.org/#url=https://cspvalidator.org/", "price":"free", "type":"Tools", "lang":"en", "keywords":"site scan scanner analyse analyze security "},
              
 ]);
 
