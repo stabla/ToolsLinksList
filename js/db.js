@@ -244,7 +244,7 @@ var elem = TAFFY([
       {"id":246, "title":"Content Security Policy (CSP) Validator", "url":"https://cspvalidator.org/#url=https://cspvalidator.org/", "price":"free", "type":"Tools", "lang":"en", "keywords":"site scan scanner analyse analyze security "},
       {"id":247, "title":"Subtle Pattern", "url":"https://www.toptal.com/designers/subtlepatterns/", "price":"free", "type":"Ressources", "lang":"en", "keywords":"UI background inspiration pattern"},
  {"id":248, "title":"Web code tools", "url":"http://webcodetools.com/", "price":"free", "type":"Tools", "lang":"en", "keywords":"html website ressources tool list"},
- {"id":249, "title":"Regex 101", "url":"https://regex101.com/", "price":"free", "type":"Ressources", "lang":"en", "keywords":"html background inspiration tool"},
+ {"id":249, "title":"Regex 101", "url":"https://regex101.com/", "price":"free", "type":"Tools", "lang":"en", "keywords":"tool regex format"},
   
 ]);
 
