@@ -26,7 +26,7 @@ html, body{
 
 .search-container {
     padding: 20px 50px;
-    height: 180px;
+    height: 160px;
     opacity: 1;
     animation: goLeftMore 1000ms linear both;
     transition: opacity 1s cubic-bezier(.175,.885,.32,1),transform 1s cubic-bezier(.175,.885,.32,1);
@@ -38,7 +38,6 @@ html, body{
     margin-left: -140px;
     overflow: hidden;
 }
-
 
 .search-container input {
     display: block;
@@ -309,7 +308,7 @@ background: -webkit-linear-gradient(45deg,orange, blue);
     position: absolute;
     right: 20px;
     bottom: 8px;
-    width: 16%;
+    width: 13%;
     min-height: 156px;
     text-align: right;
     font-size: 0.8rem;
@@ -334,7 +333,13 @@ background: -webkit-linear-gradient(45deg,orange, blue);
 }
 
 
-@media (max-width: 760px) {
+@media (max-width: 650px) {
+    .search-container {
+        padding: 20px 0px !important;
+    }
+}
+
+@media (max-width: 820px) {
      .bottom-right-panel {
         display: none;
         margin-top: 25px;
@@ -363,6 +368,8 @@ background: -webkit-linear-gradient(45deg,orange, blue);
         padding: 0 20px;
     }
 }
+
+
 
 /* ANIMATION */
 @keyframes goLeftMore {

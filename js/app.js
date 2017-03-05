@@ -9,7 +9,6 @@ const _counterEl = document.getElementById('count');
 var countElementShowed = 0;
 
 const foundedHtml = document.getElementById('founded-lists');
-const stickerHtml = document.getElementsByClassName('bottom-right-panel')[0];
 var elementHTML;
 
 const ifNothing = "<img src='src/giphy.gif' alt='Nothing found!' class='nohting' style='margin: 0 auto;display: block;'> <p>But there's nothing... Push via <a href='#'>Github</a> if you have something.</p>";
@@ -27,7 +26,6 @@ var splitKeywords = function (val) {
 var clear = function () {
     foundedHtml.innerHTML = "";
     _nothingEl[0].innerHTML = "";
-    stickerHtml.style.position = '';
 }
 
 var counter = function () {
@@ -128,9 +126,6 @@ var searchInDB = function (val) {
         // If nothing, show gif + text
         _nothingEl[0].innerHTML = ifNothing;
         
-        // only for style. 
-        stickerHtml.style.position = 'relative';
-        stickerHtml.style.display = 'block';
     }
 }
 
