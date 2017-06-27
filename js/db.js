@@ -247,6 +247,7 @@ var elem = TAFFY([
  {"id":249, "title":"Regex 101", "url":"https://regex101.com/", "price":"free", "type":"Tools", "lang":"en", "keywords":"tool regex format"},
    {"id":250, "title":"Github Integration for Atom", "url":"https://github.com/atom/github", "price":"free", "type":"Plugin", "lang":"en", "keywords":"github atom git "},
    {"id":251, "title":"Chatbot framework", "url":"https://github.com/fondbot/framework", "price":"free", "type":"Tools", "lang":"en", "keywords":"framework bot chatbot chat"},
+   {"id":252, "title":"UI Kit", "url":"http://spyrestudios.com/14-flat-design-ui-packs-next-project/?utm_content=buffer8889a&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer", "price":"free", "type":"Article", "lang":"en", "keywords":"ui kit webdesign "},
   
   
 ]);
