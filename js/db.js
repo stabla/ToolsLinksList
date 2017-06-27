@@ -245,6 +245,8 @@ var elem = TAFFY([
       {"id":247, "title":"Subtle Pattern", "url":"https://www.toptal.com/designers/subtlepatterns/", "price":"free", "type":"Ressources", "lang":"en", "keywords":"UI background inspiration pattern"},
  {"id":248, "title":"Web code tools", "url":"http://webcodetools.com/", "price":"free", "type":"Tools", "lang":"en", "keywords":"html website ressources tool list"},
  {"id":249, "title":"Regex 101", "url":"https://regex101.com/", "price":"free", "type":"Tools", "lang":"en", "keywords":"tool regex format"},
+   {"id":250, "title":"Github Integration for Atom", "url":"https://github.com/atom/github", "price":"free", "type":"Plugin", "lang":"en", "keywords":"github atom git "},
+  
   
 ]);
 
