@@ -1,3 +1,5 @@
+## (DEPRECATED, NOT UPDATED SINCE 2017)
+
 # Tools & Links Database <img src="storage.png" width="24">
 
 I was bored to losing time when I was searching for something in my bookmarks, so I created this. 
